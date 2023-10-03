@@ -2,5 +2,13 @@
 {% load static %}
 
 {% block body %}
-<img src="{% static 'graphic.png' %}" alt="bitcoin-price">
+<div class = 'text-center'>
+<img src="{% static 'graphic.png' %}" alt="bitcoin-price"> <br>
+<h3>
+    Actual price: <br>
+    {{response.USD.last}} {{response.USD.symbol}} <br>
+    {{response.RUB.last}} {{response.RUB.symbol}} <br>
+    (Current USD rate: {{response.rate}} RUB for 1$)
+</h3>
+</div>
 {% endblock body %}

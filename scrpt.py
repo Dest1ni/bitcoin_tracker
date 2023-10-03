@@ -14,3 +14,5 @@ if answer.status_code == 200:
     x.save()
     y = Y(y=X.objects.count())
     y.save()
+    clear_x = X.objects.first()
+    clear_x.delete()
